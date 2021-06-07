@@ -6,19 +6,29 @@ namespace basic_programming_guide_csharp
     {
         static void Main(string[] args)
         {
-            int x, soma;
 
-            x = int.Parse(Console.ReadLine());
-            soma = 0;
-            while (x != 0)
+            int x, y;
+
+            string[] vet = Console.ReadLine().Split(" ");
+            x = int.Parse(vet[0]);
+            y = int.Parse(vet[1]);
+
+
+            while (x != y)
             {
-                soma = soma + x;
-                x = int.Parse(Console.ReadLine());
+                if (x < y)
+                {
+                    Console.WriteLine("Crescente");
+                }
+                else
+                {
+                    Console.WriteLine("Decrecente");
+                }
 
+                vet = Console.ReadLine().Split(" ");
+                x = int.Parse(vet[0]);
+                y = int.Parse(vet[1]);
             }
-            Console.WriteLine(soma);
-
-
 
 
         }
